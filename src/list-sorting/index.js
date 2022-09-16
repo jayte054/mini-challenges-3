@@ -1,39 +1,40 @@
-let  needle= 5;
-    let haystack= [1, 2, 3, 4, 5];
-    [1, 2, 3, 4, 5],
-    [1, 2, 3, 4, 5],
-    [1, 2, 3, 4, 5],
+
 
 function listSorting(needle, haystack) {
-   
-   
     if (haystack.length === 0) {
-    return -1
-   } 
-   for (let i = 0; i < haystack.length; i++) {
-    return haystack.lastIndexOf(needle)
-   }
-   if (typeof (haystack[0]) === "object") {
-   let row;
-   let column;
-   //let result = [row, column]
-
-   for (let i = 0; i < haystack.length; i++) {
-    for (let j = 0; j < haystack[i].length; j++){
-        
-        if (matrix[i][j] === keystring) {
-            column = matrix[i].lastIndexOf(needle)
-            row = i      
-              
+        return -1
     }
-   }
-}
-if (row === undefined) return -1;
-return [row, column]
-}else{
+    let lastIndex = 0
+    for (let i = 0; i < haystack.length; i++){
+        if (haystack[i] === needle){
+        lastIndex++
+    }
+    }
+    
+    if (typeof (haystack.length[0]) === "object"){
+        let row;
+        let column;
+        
+    for (let i = 0; i < haystack.length; i++) {
+        for (let j = 0; j < haystack[i].length; j++) {
+            if (haystack[i][j] === needle) {
+                row = haystack.lastIndexOf(needle)
+                column = i
+            }
+        }
+
+    }
+    if (result[0] === undefined) return -1;
+    return indexArray   
+} else {
     return haystack.lastIndexOf(needle)
 }
-}
-
-
+}  
+console.log(listSorting(200, [
+    [100, 200, 300],
+    [300, 200, 100],
+    [300, 100, 200],
+    [200, 100, 300],
+    [100, 200, 300],
+  ]))
 module.exports = listSorting;
